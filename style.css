@@ -42,8 +42,13 @@
     padding: 0;
 }
 
-a {
+a, a:link, a:active {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
 }
 
 body {
@@ -139,6 +144,14 @@ body {
     );
 }
 
+.head-item-links {
+    display: flex;
+    flex-direction: row;
+    row-gap: 18px;
+    column-gap: 48px;
+    padding: 23px 33px;
+}
+
 .tasks-container {
     display: flex;
     flex-wrap: wrap;
@@ -176,4 +189,11 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+    .head-item-links {
+        flex-direction: column;
+        padding: 28px 33px;
+    }
 }
