@@ -105,6 +105,36 @@ body {
     height: clamp(133px, (100vw - var(--report-breakpoint))*1000, 355px);
 }
 
+.head-item-inner > * {
+    display: inline-block;
+}
+
+.avatar-container {
+    --image-b-radius: clamp(35px, (100vw - var(--report-breakpoint))*1000, 42px);
+    --image-radius: calc( var(--image-b-radius) * 2 );
+
+    border-radius: var(--image-b-radius);
+    border: 4px solid white;
+    width: var(--image-radius);
+    height: var(--image-radius);
+}
+
+.avatar-container > img {
+    width: 100%;
+}
+
+.avatar-report-line {
+    font-size: calc( 70 / 85 * 1em );
+}
+
+.avatar-name-line {
+    font-size: clamp(
+        calc(170 / 130 * 1em),
+        (100vw - var(--report-breakpoint))*1000,
+        calc(135 / 62 * 1em)
+    );
+}
+
 .tasks-container {
     display: flex;
     flex-wrap: wrap;
