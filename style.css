@@ -44,7 +44,6 @@
 
 a, a:link, a:active {
     text-decoration: none;
-    color: black;
 }
 
 a:hover {
@@ -54,6 +53,7 @@ a:hover {
 body {
     font-family: "Rubik", "sans-serif";
     font-size: 18px;
+    color: white;
 }
 
 .report-container {
@@ -181,6 +181,30 @@ body {
     width: 100%;
     top: clamp(42px, (100vw - var(--report-breakpoint))*1000, 45px);
     bottom: 0;
+
+    /* padding: 28px clamp(25px, (100vw - var(--report-breakpoint))*1000, 32px); */
+}
+
+.task-item-title, .task-item-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    /* margin-top: clamp(18px, (100vw - var(--report-breakpoint))*1000, 23px); */
+}
+
+.task-item-title {
+    font-weight: 500;
+}
+
+.task-item-time {
+    font-size: clamp(1.7727em, (100vw - var(--report-breakpoint))*1000, 2.875em);
+    font-weight: 300;
+}
+
+.task-item-prev {
+    font-size: 0.833em;
 }
 
 .attribution {

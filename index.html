@@ -32,9 +32,19 @@
 
      --><div class="tasks-container">
             <div class="task-item">
-                Work
-
                 <div class="task-item-inner">
+                    <div class="task-item-title">
+                        <div>Work</div>
+                        <a href="#" class="task-item-options">...</a>
+                    </div>
+                    <div class="task-item-info">
+                        <div class="task-item-time">
+                            32hrs
+                        </div>
+                        <div class="task-item-prev">
+                            Last Week - 36hrs
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -66,7 +76,7 @@
     </div>
 
     <script>
-        document.querySelectorAll(".head-item-links > *").forEach( el => 
+        document.querySelectorAll("a").forEach( el =>
             el.addEventListener('click', e => e.preventDefault())
         );
     </script>
