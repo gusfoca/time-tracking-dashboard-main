@@ -119,6 +119,7 @@ body {
 .head-item-links {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     row-gap: 18px;
     column-gap: 48px;
     padding: 23px 33px;
