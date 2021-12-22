@@ -32,7 +32,7 @@
 }
 
 :root {
-    --report-breakpoint: 768px;
+    --report-breakpoint: 1050px;
     --flex-gap: clamp(25px, (100vw - var(--report-breakpoint))*1000, 30px);
 }
 
@@ -100,7 +100,7 @@ body {
     flex: 0 0 clamp(255px, (var(--report-breakpoint) - 100vw)*1000, 100%);
     background-color: purple;
     border-radius: 15px;
-    height: clamp(205px, (100vw - var(--report-breakpoint))*1000, 518px);
+    height: clamp(205px, (100vw - calc( var(--report-breakpoint) - 1px) )*1000, 518px);
 }
 
 .head-item-inner {
@@ -108,12 +108,20 @@ body {
     border-radius: 15px;
     padding: 31px 28px;
     width: 100%;
-    height: clamp(133px, (100vw - var(--report-breakpoint))*1000, 355px);
+    height: clamp(133px, (100vw - calc( var(--report-breakpoint) - 1px) )*1000, 355px);
 }
 
 .head-item-inner > * {
     display: inline-block;
     vertical-align: middle;
+}
+
+.head-item-links {
+    display: flex;
+    flex-direction: row;
+    row-gap: 18px;
+    column-gap: 48px;
+    padding: 23px 33px;
 }
 
 .avatar-container {
@@ -144,14 +152,6 @@ body {
     );
 }
 
-.head-item-links {
-    display: flex;
-    flex-direction: row;
-    row-gap: 18px;
-    column-gap: 48px;
-    padding: 23px 33px;
-}
-
 .tasks-container {
     display: flex;
     flex-wrap: wrap;
@@ -167,11 +167,9 @@ body {
     flex:   clamp(
                 clamp(100% / 4 - 0.1%, (720px - 100%) * 1000, 100% / 3 - 0.1%),
                 (var(--report-breakpoint) - 100vw)*1000,
-                clamp(100% / 3 - 0.1%, (330px - 100%) * 1000, 100%)
+                clamp(100% / 3 - 0.1%, (708px - 100vw) * 1000, 100%)
             );
-    height: 22.8vw;
-    min-height: 160px;
-    max-height: 245px;
+    height: clamp(160px, (100vw - var(--report-breakpoint))*1000, 245px);
 }
 
 .task-item-inner {
@@ -218,7 +216,7 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1050px) {
     .head-item-links {
         flex-direction: column;
         padding: 28px 33px;
