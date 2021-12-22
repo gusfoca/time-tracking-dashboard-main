@@ -176,13 +176,13 @@ body {
 
 .task-item-inner {
     position: absolute;
-    background-color: blue;
+    background-color: red;
     border-radius: 15px;
     width: 100%;
     top: clamp(42px, (100vw - var(--report-breakpoint))*1000, 45px);
     bottom: 0;
 
-    /* padding: 28px clamp(25px, (100vw - var(--report-breakpoint))*1000, 32px); */
+    padding: 28px clamp(25px, (100vw - var(--report-breakpoint))*1000, 32px);
 }
 
 .task-item-title, .task-item-info {
@@ -190,12 +190,15 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-
-    /* margin-top: clamp(18px, (100vw - var(--report-breakpoint))*1000, 23px); */
+    gap: 11px;
 }
 
 .task-item-title {
     font-weight: 500;
+}
+
+.task-item-info {
+    margin-top: clamp(6px, (100vw - var(--report-breakpoint))*1000, 23px);
 }
 
 .task-item-time {
