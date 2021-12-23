@@ -163,7 +163,6 @@ body {
 
 .task-item {
     position: relative;
-    background-color: green;
     border-radius: 15px;
     flex:   clamp(
                 clamp(100% / 4 - 0.1%, (720px - 100%) * 1000, 100% / 3 - 0.1%),
@@ -171,6 +170,8 @@ body {
                 clamp(100% / 3 - 0.1%, (708px - 100vw) * 1000, 100%)
             );
     height: clamp(160px, (100vw - var(--report-breakpoint))*1000, 245px);
+    background: url("/images/icon-work.svg") right 18px top -10px no-repeat,
+                green;
 }
 
 .task-item-inner {
