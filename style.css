@@ -183,7 +183,8 @@ body {
 }
 
 .task-item {
-    position: relative;
+    display: flex;
+    align-items: flex-end;
     border-radius: 15px;
     flex:   clamp(
                 clamp(100% / 4 - 0.1%, (720px - 100%) * 1000, 100% / 3 - 0.1%),
@@ -197,13 +198,12 @@ body {
 }
 
 .task-item-inner {
-    position: absolute;
     border-radius: 13px;
     width: 100%;
-    top: clamp(42px, (100vw - var(--report-breakpoint))*1000, 45px);
-    bottom: 0;
+    height: min-content;
 
     padding: 28px clamp(25px, (100vw - var(--report-breakpoint))*1000, 32px);
+    padding-bottom: clamp(26px, (100vw - var(--report-breakpoint))*1000, 33px);
 
     background-color: var(--bg-dark-blue);
 }
