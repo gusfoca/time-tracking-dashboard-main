@@ -197,6 +197,12 @@ body {
     font-weight: 500;
 }
 
+.task-item-options {
+    font-size: 22px;
+
+    /* color: var(--bg-pale-blue); */
+}
+
 .task-item-info {
     margin-top: clamp(6px, (100vw - var(--report-breakpoint))*1000, 23px);
 }
