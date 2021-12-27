@@ -1,14 +1,21 @@
+
+//=======   Global Constants   ========
+
 const timeframes = {
     daily: "day",
     weekly: "week",
     monthly: "month",
 };
 
+const tasks = document.querySelector(".tasks-container");
+
+let data;
+
+//=======   Functions   ========
+
 function getTaskClassName(from) {
     return from.toLowerCase().replace(" ", "-");
 }
-
-const tasks = document.querySelector(".tasks-container");
 
 function updateTask(index, timeframe, taskData) {
     const el = tasks.children[index];
@@ -25,7 +32,8 @@ function updateTasks(timeframe, data) {
     data.forEach( (task, i) => updateTask(i, timeframe, task) );
 }
 
-let data;
+//=======   Data Loading   ========
+
 const request = new XMLHttpRequest();
 request.onload = () => {
     data = request.response;
@@ -38,6 +46,8 @@ request.onload = () => {
 request.open("GET", "./data.json");
 request.responseType = "json";
 request.send();
+
+//=======   Links' click event   ========
 
 document.querySelectorAll("a").forEach( el =>
     el.addEventListener('click', e => {
