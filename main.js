@@ -8,7 +8,6 @@ function getTaskClassName(from) {
     return from.toLowerCase().replace(" ", "-");
 }
 
-//Generating cards
 const tasks = document.querySelector(".tasks-container");
 
 function updateTask(index, timeframe, taskData) {
