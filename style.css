@@ -35,8 +35,6 @@
     --report-breakpoint: 768px;
     --flex-gap: clamp(25px, (100vw - var(--report-breakpoint))*1000, 30px);
 
-    --bg-blue: hsl(246, 80%, 60%);
-
     --bg-work-color: hsl(15, 100%, 70%);
     --bg-play-color: hsl(195, 74%, 62%);
     --bg-study-color: hsl(348, 100%, 68%);
@@ -44,6 +42,7 @@
     --bg-social-color: hsl(264, 64%, 52%);
     --bg-self-care-color: hsl(43, 84%, 65%);
 
+    --bg-blue: hsl(246, 80%, 60%);
     --bg-very-dark-blue: hsl(226, 43%, 10%);
     --bg-dark-blue: hsl(235, 46%, 20%);
     --bg-desaturated-blue: hsl(235, 45%, 61%);
@@ -214,6 +213,11 @@ body {
     padding-bottom: clamp(26px, (100vw - var(--report-breakpoint))*1000, 33px);
 
     background-color: var(--bg-dark-blue);
+    cursor: pointer;
+}
+
+.task-item-inner:hover {
+    background-color: var(--bg-desaturated-blue);
 }
 
 .task-item-title, .task-item-info {
