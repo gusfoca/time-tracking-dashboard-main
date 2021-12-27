@@ -281,7 +281,7 @@ body {
 }
 
 .active-link {
-    color: white;
+    color: white !important;
 }
 
 .attribution {
