@@ -245,6 +245,7 @@ body {
 
 .task-item-prev {
     font-size: 0.833em;
+    white-space: nowrap;
 
     color: var(--bg-pale-blue);
 }
