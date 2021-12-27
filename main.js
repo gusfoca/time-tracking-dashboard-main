@@ -5,7 +5,7 @@ const timeframes = {
 };
 
 function getTaskClassName(from) {
-    return from[0].toLowerCase() + from.slice(1);
+    return from.toLowerCase().replace(" ", "-");
 }
 
 //Generating cards
@@ -13,7 +13,8 @@ const tasks = document.querySelector(".tasks-container");
 
 function updateTask(index, timeframe, taskData) {
     const el = tasks.children[index];
-    el.classList.toggle( getTaskClassName(taskData.title).replace(" ", "-") );
+
+    el.classList.add( `${getTaskClassName(taskData.title)}-task` );
     el.querySelector(".task-item-title > div").textContent = taskData.title;
     el.querySelector(".task-item-time").textContent = 
         taskData.timeframes[timeframe].current + "hrs";
@@ -45,6 +46,8 @@ document.querySelectorAll("a").forEach( el =>
 
         //Only for timeframe links
         if(e.target.getAttribute("data-frame")) {
+            document.querySelector(".active-link").classList.toggle("active-link");
+            e.target.classList.toggle("active-link");
             updateTasks(e.target.getAttribute("data-frame"), data);
         }
     })

@@ -37,12 +37,12 @@
 
     --bg-blue: hsl(246, 80%, 60%);
 
-    --bg-work: hsl(15, 100%, 70%);
-    --bg-play: hsl(195, 74%, 62%);
-    --bg-study: hsl(348, 100%, 68%);
-    --bg-exercise: hsl(145, 58%, 55%);
-    --bg-social: hsl(264, 64%, 52%);
-    --bg-self-care: hsl(43, 84%, 65%);
+    --bg-work-color: hsl(15, 100%, 70%);
+    --bg-play-color: hsl(195, 74%, 62%);
+    --bg-study-color: hsl(348, 100%, 68%);
+    --bg-exercise-color: hsl(145, 58%, 55%);
+    --bg-social-color: hsl(264, 64%, 52%);
+    --bg-self-care-color: hsl(43, 84%, 65%);
 
     --bg-very-dark-blue: hsl(226, 43%, 10%);
     --bg-dark-blue: hsl(235, 46%, 20%);
@@ -203,9 +203,6 @@ body {
                 clamp(100% / 3 - 0.1%, (708px - 100vw) * 1000, 100%)
             );
     height: clamp(160px, (100vw - var(--report-breakpoint) + 1px)*1000, 245px);
-    
-    background: url("/images/icon-work.svg") right 18px top -10px no-repeat,
-                var(--bg-work);
 }
 
 .task-item-inner {
@@ -250,6 +247,40 @@ body {
     font-size: 0.833em;
 
     color: var(--bg-pale-blue);
+}
+
+.work-task {
+    background: url("/images/icon-work.svg") right 18px top -10px no-repeat,
+                var(--bg-work-color);
+}
+
+.play-task {
+    background: url("/images/icon-play.svg") right 18px top -10px no-repeat,
+                var(--bg-play-color);
+}
+
+.self-care-task {
+    background: url("/images/icon-self-care.svg") right 18px top -10px no-repeat,
+                var(--bg-self-care-color);
+}
+
+.social-task {
+    background: url("/images/icon-social.svg") right 18px top -10px no-repeat,
+                var(--bg-social-color);
+}
+
+.study-task {
+    background: url("/images/icon-study.svg") right 18px top -10px no-repeat,
+                var(--bg-study-color);
+}
+
+.exercise-task {
+    background: url("/images/icon-exercise.svg") right 18px top -10px no-repeat,
+                var(--bg-exercise-color);
+}
+
+.active-link {
+    color: white;
 }
 
 .attribution {
