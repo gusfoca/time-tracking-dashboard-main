@@ -114,7 +114,13 @@ body {
     }
 }
 
-@media screen and (min-width: 708px) {
+@media screen and (min-width: 709px) {
+    .report-container {
+        margin: var(--margin-y) calc( var(--margin-x) / 2 );
+    }
+}
+
+@media screen and (min-width: 768px) {
     .report-container {
         max-width: 1110px;
         margin: var(--margin-y) var(--margin-x);
@@ -300,5 +306,9 @@ body {
     .head-item-links {
         flex-direction: column;
         padding: 28px 33px;
+    }
+
+    .task-item-info {
+        display: block;
     }
 }
