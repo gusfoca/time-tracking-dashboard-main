@@ -261,7 +261,7 @@ body {
 }
 
 .work-task {
-    background: url("/images/icon-work.svg") right 18px top -10px no-repeat,
+    background: url("./images/icon-work.svg") right 18px top -10px no-repeat,
                 var(--bg-work-color);
 }
 
